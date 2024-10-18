@@ -64,7 +64,7 @@ jobs:
       - name: Build static file
         run: |
           mkdir -p ~/dist
-          echo "<html><body><h1>Deployed by GitHub Actions</h1></body></html>" > dist/index.html
+          echo "<html><body><h1>Deployed by GitHub Actions</h1></body></html>" > ~/dist/index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
