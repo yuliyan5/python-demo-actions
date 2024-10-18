@@ -63,12 +63,12 @@ jobs:
 
       - name: Build static file
         run: |
-          mkdir -p dist
+          mkdir -p ~/dist
           echo "<html><body><h1>Deployed by GitHub Actions</h1></body></html>" > dist/index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.PAGES_TOKEN}}
-          publish_dir: ./dist
+          publish_dir: ~/dist
     
